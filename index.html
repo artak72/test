@@ -1,76 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title> 
+    <title>Document</title>
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
         }
-        button{
+
+        button {
             text-align: center;
         }
     </style>
 </head>
-<body>
-   
-    <form action="" style="margin: 0;padding: 0; border-radius: 25px; width: 70%; background-color: rgb(194, 191, 191); padding: 30px;">
-        <label for="materialType" style="margin-bottom: 10px;">Тип материала</label><br>
-<select style="background-color: white; margin-top: 10px; margin-bottom: 10px;">
-    <option value="10789" selected="selected">Лаки</option>
-    <option value="208">Краска</option>
-    <option value="190">Клей, Жидкое стекло, Вспомогательные жидкости, Очистители</option>
-    <option value="65">Контактные жидкости</option>
-    <option value="186">Ремонтно-строительные материалы</option>
-    <option value="51">Гидроизоляционные материалы</option>
-    <option value="175">Грунтовки</option>
-    <option value="1709">Цветные кладочные смеси</option>
-    <option value="91">Плиточный клей</option>
-    <option value="26">Гипсокартон (ГКЛ, ГВЛ)</option>
-    <option value="120">Сухие смеси</option>
-    <option value="2343">Клей для пеноблока</option>
-    <option value="81">Шпатлевки</option>
-    <option value="223">Противоморозные и защитные средства для древесины</option>
-    <option value="2829">Гидроизоляции и грунтовки</option>
-    <option value="113">Наливные полы</option>
-    <option value="106">Сухая штукатурка (штукатурная смесь)</option>
-    <option value="2822">Сухие строительные смеси</option>
-    <option value="10830">Пропитка для древесины</option>
-                                            
-</select><br>
-<label for="material">продукт</label><br>
-<select style="margin-bottom: 20px; background-color: white;">
-    
-    <option value="10789" selected="selected">Лаки</option>
-    <option value="208">Краска</option>
-    <option value="190">Клей, Жидкое стекло, Вспомогательные жидкости, Очистители</option>
-    <option value="65">Контактные жидкости</option>
-    <option value="186">Ремонтно-строительные материалы</option>
-    <option value="51">Гидроизоляционные материалы</option>
-    <option value="175">Грунтовки</option>
-    <option value="1709">Цветные кладочные смеси</option>
-    <option value="91">Плиточный клей</option>
-    <option value="26">Гипсокартон (ГКЛ, ГВЛ)</option>
-    <option value="120">Сухие смеси</option>
-    <option value="2343">Клей для пеноблока</option>
-    <option value="81">Шпатлевки</option>
-    <option value="223">Противоморозные и защитные средства для древесины</option>
-    <option value="2829">Гидроизоляции и грунтовки</option>
-    <option value="113">Наливные полы</option>
-    <option value="106">Сухая штукатурка (штукатурная смесь)</option>
-    <option value="2822">Сухие строительные смеси</option>
-    <option value="10830">Пропитка для древесины</option>                                    
-</select>
-<div style="margin-bottom: 10px;"><label for="">плошадь поверхности</label>
-    <input style="width: 30px;  background-color: white;" type="text">
-    <label for="">толшина слоя</label>
-    <input style="width: 30px; background-color: white;" type="text"></div>
 
-    <button style="background-color: yellow; padding: 10px 20px; border-radius: 5px;">Рассчитать</button>
-    <button style=" background-color: white;padding: 10px 20px; float: right; border-radius: 5px;">Рассчитать для всех</button>
+<body>
+
+    <form action=""
+        style="margin: 0;padding: 0; border-radius: 25px; width: 70%; background-color: rgb(194, 191, 191); padding: 30px;">
+        <label for="materialType" style="margin-bottom: 10px;">Тип материала</label><br>
+        <select id="Product_Type" style="background-color: white; margin-top: 10px; margin-bottom: 10px;">
+            <option value="10789" selected="selected">Лаки</option>
+            <option value="190">Клей, Жидкое стекло, Вспомогательные жидкости, Очистители</option>
+            <option value="65">Контактные жидкости</option>
+            <option value="186">Ремонтно-строительные материалы</option>
+            <option value="51">Гидроизоляционные материалы</option>
+            <option value="175">Грунтовки</option>
+            <option value="1709">Цветные кладочные смеси</option>
+            <option value="91">Плиточный клей</option>
+            <option value="26">Гипсокартон (ГКЛ, ГВЛ)</option>
+            <option value="120">Сухие смеси</option>
+            <option value="2343">Клей для пеноблока</option>
+            <option value="81">Шпатлевки</option>
+            <option value="223">Противоморозные и защитные средства для древесины</option>
+            <option value="2829">Гидроизоляции и грунтовки</option>
+            <option value="113">Наливные полы</option>
+            <option value="106">Сухая штукатурка (штукатурная смесь)</option>
+            <option value="2822">Сухие строительные смеси</option>
+            <option value="10830">Пропитка для древесины</option>
+
+        </select><br>
+        <label for="material">продукт</label><br>
+        <select id="Product" style="margin-bottom: 20px; background-color: white;">
+
+        </select>
+        <div style="margin-bottom: 10px;"><label for="">плошадь поверхности </label>
+            <input id="area" value="10"
+                style="width: 30px; padding: 0; padding-top: 0; padding-bottom: 0; background-color: white;"
+                type="text">
+            <label for=""> м² толшина слоя </label>
+            <input id="h" value="2"
+                style="width: 30px;  padding: 0; padding-top: 0; padding-bottom: 0; background-color: white;"
+                type="text">
+            <label for=""> мм </label>
+        </div>
+
+        <button type="button" id="button1" style="background-color: #FFCC01; padding: 10px 20px; border-radius: 5px;">
+            Рассчитать
+        </button>
+
+
+
     </form>
+
+
+    <form id="form2" action=""
+        style="padding-top: 20px; display: block; margin: 0;padding: 0; border-radius: 25px; width: 70%; background-color: rgb(194, 191, 191); padding: 30px; margin-top: 30px;">
+
+        <div class="input_container">
+            <span id="e_block" style="display:block;overflow:hidden;font-size:16px;">
+                <p class="hdp" style="font-weight: bold;">Расчет</p>
+                <br>На поверхность площадью
+                <span id="formArea" style="font-size:20px;font-weight:700;">10</span> м2 и толщиной слоя
+                <span id="formH" style="font-size:20px;font-weight:700;">2</span> мм требуется: 
+                <span id="mass" style="font-size:20px;font-weight:700;">6</span> кг<br> <br>Стоимость
+                <span id="count" style="font-size:20px;">1</span> мешка весом <span id="massPerUniq"
+                    style="font-size:20px;font-weight:700;">10</span> кг -
+                <span id="cost" style="font-size:20px;">820</span> руб.
+
+
+            </span>
+            <br><br>
+
+            <div class="item">
+                <p id="name">
+                    Товар из расчета
+                    <span>
+                        "Тип Продукта:
+                    </span>
+                    <span>
+                        <a href="#"> прадукт "</a>
+                    </span>
+                    цена
+                </p>
+            </div>
+        </div>
+        </div>
+
+
+
+    </form>
+
+
+
+    <script>
+        let type = [ 
+            ["Общий производитель", "КБС", "Marshall"], 
+            ["Общий производитель" ,"Литокол","Евролюкс","Боларс","Tikkurila","Respect","Marshall","Dulux","Dufa","Alpina","Alpa"],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+        
+        ];
+        let product = [
+            [
+                ["Лак фасадный МультиПротект-Л (5 л)"],
+                ["Лак по кирпичу, камню и бетону КБС (10 л)"],
+                ["Лак для яхт Marshall Protex / Маршал Протекс глянец (13 л)", "Лак для яхт Marshall Protex / Маршал Протекс п/мат (13 л)", "Лак паркетный Marshall Protex / Маршал Протекс п/мат (13 л) "],
+                ["Лак для паркета Dulux Celco Terra 20 / Дюлакс Селко Терра п/мат (10 л)", "Лак для паркета Dulux Celco Terra 45 / Дюлакс Селко Терра п/гл (10 л)", "Лак для паркета Dulux Celco Terra 90 / Дюлакс Селко Терра глянец (10 л)"],
+            ],
+
+            [
+                ["Sniezka WHITE EFFECT водно-дисперсионная полиакриловая (3 л)" , "Краска водно-эмульсионная «Superweiss» (15 кг)" , "Краска для внутренних работ Sniezka OTTO farbe снежно-белая/ акриловая/ СНЕЖКА (3 л)", "Краска для внутренних работ ОПТИМИСТ W202 (1.5 кг)", "Краска для внутренних работ ОПТИМИСТ W202 (14 кг)", "Краска для внутренних работ ОПТИМИСТ W202 (3 кг)","Краска для внутренних работ ОПТИМИСТ W202 (45 кг)","Краска для внутренних работ ОПТИМИСТ W204 (1.5 кг)","Краска для внутренних работ ОПТИМИСТ W204 (14 кг)","Краска для внутренних работ ОПТИМИСТ W204 (3 кг)","Краска для внутренних работ ОПТИМИСТ W204 (45 кг)", "Краска для внутренних работ ОПТИМИСТ W209 (14 кг)", "Краска для внутренних работ ОПТИМИСТ W209 (3 кг)", "Краска для внутренних работ ОПТИМИСТ W209 (45 кг)" , "Краска для внутренних работ ОПТИМИСТ W209 (7 кг)" ,"Краска для интерьеров ОРЕОЛ белоснежная (13 кг)","Краска для металла антикоррозийная ZIP-GUARD белая гладкая (0.9 л)","Краска для металла антикоррозийная ZIP-GUARD белая гладкая (3.7 л)","Краска для металла антикоррозийная ZIP-GUARD белая матовая (0.9 л)"," Краска для металла антикоррозийная ZIP-GUARD белая матовая (3.7 л)"," Краска для металла антикоррозийная ZIP-GUARD желтая гладкая (0.9 л)"," Краска для металла антикоррозийная ZIP-GUARD желтая гладкая (3.7 л)"," Краска для металла антикоррозийная ZIP-GUARD зеленая гладкая (0.9 л)"," Краска для металла антикоррозийная ZIP-GUARD белая матовая (3.7 л)","Краска для металла антикоррозийная ZIP-GUARD серая гладкая (0.9 л)", " Краска для металла антикоррозийная ZIP-GUARD серая, молотковая (0.9 л)" , "Краска для металла антикоррозийная ZIP-GUARD серая, молотковая (3.7 л)", "Краска для металла антикоррозийная ZIP-GUARD серая-серебристая, молотковая (0.9 л)", "Краска для металла антикоррозийная ZIP-GUARD серая-серебристая, молотковая (3.7 л)", " Краска для металла антикоррозийная ZIP-GUARD серая-тёмная, молотковая (0.9 л)","Краска для металла антикоррозийная ZIP-GUARD серая-тёмная, молотковая (3.7 л)", "Краска для металла антикоррозийная ZIP-GUARD синяя гладкая (0.9 л)","Краска для металла антикоррозийная ZIP-GUARD синяя гладкая (3.7 л)", "Краска для металла антикоррозийная ZIP-GUARD черная гладкая (3.7 л)","Краска для металла антикоррозийная ZIP-GUARD черная гладкая (0.9 л)"," Краска для металла антикоррозийная ZIP-GUARD черная матовая (0.9 л)","Краска для металла антикоррозийная ZIP-GUARD черная матовая (3.7 л)","Краска для металла антикоррозийная ZIP-GUARD чёрная, молотковая (0.9 л)","Краска для металла антикоррозийная ZIP-GUARD чёрная, молотковая (3.7 л)","Краска для обоев ОРЕОЛ белоснежная (3 кг)","Краска для обоев ОРЕОЛ белоснежная (6.5 кг)","Краска для потолков NORME COLOR PROFI супербелая (14 кг)"," Краска для потолков NORME COLOR PROFI супербелая (3 кг)","Краска для потолков NORME COLOR PROFI супербелая (45 кг)","Краска для потолков NORME COLOR PROFI супербелая (7 кг)","Краска для потолков RAUF R21 супербелая/матовая/латексная (14 кг)","Краска для потолков ОПТИМИСТ W201 /белая, матовая, акриловая/ (1.5 кг)","Краска для потолков ОПТИМИСТ W201 /белая, матовая, акриловая/ (45 кг)","Краска для потолков ОПТИМИСТ W203 /супербелая, матовая, латексная/ (1.5 кг)","Краска для потолков ОПТИМИСТ W203 /супербелая, матовая, латексная/ (14 кг)","Краска для потолков ПУТЁВАЯ /ВД - АК - 2180/ супербелая (7 кг)","Краска для стен и потолков BELINKA B1 белая/ моющаяся (2 л)","Краска для стен и потолков BELINKA ослепительно белая (2 л)","Краска для стен и потолков MAGNAT CERAMIC (База C) /Sniezka/ (8.6 л) " ,"Краска для стен и потолков MiX Superwhite (14 кг)","Краска для стен и потолков SNIEZKA PERFEKT латексная (База C) /Sniezka/ (9 л)","Краска для стен и потолков Sniezka Super Latex (0.94 л)","Краска для стен и потолков Sniezka Super Latex (2.82 л)","Краска для стен и потолков Sniezka ПОДТЕКИ-ПЯТНА (0.4 л) ","Краска для стен и потолков Sniezka ПОДТЕКИ-ПЯТНА (1 л)","Краска для стен и потолков ЛАТЕК Л201 белая (14 кг)","Краска для стен и потолков ЛАТЕК Л201 белая (3 кг)","Краска для стен и потолков ЛАТЕК Л201 белая (45 кг)","Краска для стен и потолков ЛАТЕК Л202 супербелая/матовая/влагостойкая (14 кг)","Краска для стен и потолков ЛАТЕК Л202 супербелая/матовая/влагостойкая (3 кг)","Краска для стен и потолков ОРЕОЛ (6.5 кг)","Краска для стен и потолков ПУТЁВАЯ /ВД - АК - 2180/ супербелая (14 кг)","Краска для стен и потолков ПУТЁВАЯ /ВД - АК - 2180/ супербелая (45 кг)","Краска интерьерная /акриловая/моющаяся/матовая/супербелая ОПТИМИСТ W206 (14 кг)","Краска интерьерная /акриловая/моющаяся/матовая/супербелая ОПТИМИСТ W206 (45 кг)","Краска интерьерная NORME COLOR PROFI супербелая (14 кг)","Краска интерьерная NORME COLOR PROFI супербелая (3 кг)","Краска интерьерная NORME COLOR PROFI супербелая (45 кг)","Краска интерьерная NORME COLOR PROFI супербелая (7 кг)","Краска интерьерная NORME COLOR PROFI супербелая/моющаяся (14 кг)","Краска интерьерная NORME COLOR PROFI супербелая/моющаяся (3 кг)","Краска интерьерная NORME COLOR PROFI супербелая/моющаяся (45 кг)","Краска интерьерная NORME COLOR PROFI супербелая/моющаяся (7 кг)","Краска интерьерная NORME COLOR- Эконом белая/матовая (45 кг)",'Краска интерьерная RDS DECORE "PROFI супербелая, моющаяся (3 кг)',"Краска интерьерная моющаяся/ латексная/База С RAUF R24 (9 л)","Краска интерьерная моющаяся/ супербелая/ матовая/ латексная RAUF R23 (9 л)","Краска интерьерная супербелая/матовая/латексная RAUF R22 (9 л)","Краска КУХНЯ-ВАННАЯ белая матовая, биостатическая с добавлением серебра (1 л)","Краска КУХНЯ-ВАННАЯ белая с добавкой силикона ( база А ) /Sniezka (0.94 л)","Краска КУХНЯ-ВАННАЯ с добавкой силикона ( база С ) /Sniezka/ (0,9 л)","Краска КУХНЯ-ВАННАЯ с добавкой силикона ( база С ) /Sniezka/ (2.7 л)","универсальная (база С) NORME COLOR PROFI (9 л)","Краска универсальная для внут/наруж. работ E-Z TOUCH Imagination (18.9 л)","Краска универсальная для внут/наруж. работ E-Z TOUCH Imagination (3.7 л)","Краска универсальная фактурная NORME COLOR PROFI (15 кг)","Эмаль Zlata / Злата ПФ-115 (2 л)","Эмаль Zlata / Злата ПФ-115 алкидная вишневая (20 л)","Zlata / Злата ПФ-115 желтая (2.7 л)","Эмаль Zlata / Злата ПФ-115 коричневая (1.9 л)"],
+                ["Фасадная акриловая краска LITOKOL LITOTHERM Paint Acryl / ЛИТОКОЛ ЛИТОТЕРМ Пэйнт Акрил (20 кг)","Фасадная акриловая краска LITOKOL LITOTHERM Paint Sil / ЛИТОКОЛ ЛИТОТЕРМ Пэйнт Сил (20 кг)"],
+                ["Краска для потолков Евролюкс Е-1 белая (14 кг)"],
+                ["Краска Боларс Elit / Элит белая (15 кг)","Краска Боларс Elit / Элит белая (7 кг)","Краска для стен и потолков Боларс белая (15 кг)","Краска для стен и потолков Боларс белая (7 кг)","Краска для стен и потолков Боларс супербелая ", "Краска для стен и потолков Боларс супербелая (40 кг)", "Краска для стен и потолков Боларс супербелая (7 кг)","Краска для стен и потолков Боларс фасадная (15 кг)","Краска для стен и потолков Боларс фасадная (40 кг)","Краска для стен и потолков Боларс фасадная (7 кг)"],
+                ["Краска водоэмульсионная EURO 7 POWER матовая (база С) /Tikkurila (9 л)"],
+                ["Краска водно-дисперсионная Respect / Респект супербелая (14 кг)","Краска интерьерная огнебиозащитная Neomid / Неомид 3 в 1 (5 кг)","Краска огнезащитная для металла на органической основе NEOMID/НЕОМИД (25 кг)"],
+                ["Краска Marshall Maestro / Маршал Маэстро Белый Потолок Люкс мат (10 л)","Краска Marshall Maestro / Маршал Маэстро Интерьерная Классика мат (10 л)","Краска Marshall Maestro / Маршал Маэстро Фасадная мат (10 л)","Краска латексная Marshall Akrikor / Маршал Акрикор (10 л)","Краска латексная глубокоматовая Marshall Export-2 / Маршал Экспорт-2 (10 л)","Краска латексная матовая Marshall Export-7 / Маршал Экспорт-7 (10 л)","Краска латексная структурная Marshall Akrikor / Маршал Акрикор (10 л)"],
+                ["Эмаль алкидная Dulux Master M30 / Дюлакс Мастер база BW п/мат (10 л)","Эмаль алкидная Dulux Master M90 / Дюлакс Мастер база BW глянец (10 л)",],
+                ["Эмаль для отопительных приборов Dufa Heizkorperlack / Дюфа (0.75 л)",],
+                ["Краска ALPINA Практичная интерьерная Caparol/Альпина (10 л)","Краска водно-дисперсионная ALPINA Надежная интерьерная /Альпина (10 л)","Эмаль для радиаторов Alpina / Альпина (0.75)"],
+                ["Экоэмаль для радиаторов Alpa / Альпа белая п/мат (0.5 л)","Эмаль для радиаторов Alpa / Альпа белая п/мат (0.5 л)","Эмаль для радиаторов Alpa / Альпа белая п/мат (2.5 л)"]
+            ],
+            [
+                
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+
+        ];
+
+
+    
+
+        let Product_Type = document.getElementById("Product_Type");
+        let Product = document.getElementById("Product");
+        let TypeNumber = Product_Type.selectedIndex;
+        console.log(Product_Type.selectedIndex);
+
+
+        Product_Type.addEventListener('change', (event) => {
+            /*document.getElementById("form2").style.display="none";*/
+            ProductType = event.target.options[event.target.options.selectedIndex].text;
+            TypeNumber = event.target.options.selectedIndex;
+            let size = Product.childNodes.length;
+            for (let index = 0; index < size; index++) {
+               
+                Product.firstChild.remove();
+            }
+                
+
+            
+                
+            for (let j = 0; j < type[TypeNumber].length; j++) {
+                let optGroup = document.createElement('optgroup');
+                Product.appendChild(optGroup);
+                optGroup.label = type[TypeNumber][j];
+
+                for (var i = 0; i < product[TypeNumber][j].length; i++) {
+                    
+                    let opt = document.createElement('option');
+                    opt.value = i;
+                    opt.innerHTML = product[TypeNumber][j][i];
+                    optGroup.appendChild(opt);
+                }
+
+            }
+            
+
+
+            
+        });
+
+        let button = document.getElementById('button1');
+        button.addEventListener('click', (e) => {
+            document.getElementById("formArea").textContent = document.getElementById("area").value;
+            document.getElementById("formH").textContent = document.getElementById("h").value;
+            document.getElementById("mass").textContent = Math.round(document.getElementById("area").value * document.getElementById("h").value / 1, 4);
+            let mass = document.getElementById("mass").textContent;
+            let massPerUniq = document.getElementById("massPerUniq").textContent;
+            document.getElementById("count").textContent = mass % massPerUniq == 0 ? mass / massPerUniq : (mass - (mass % massPerUniq)) / 10 + 1;
+            document.getElementById("cost").textContent = document.getElementById("count").textContent * 410;
+        });
+
+    </script>
+
 </body>
+
 </html>
